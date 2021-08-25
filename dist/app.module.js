@@ -23,7 +23,7 @@ AppModule = __decorate([
                 type: 'postgres',
                 autoLoadEntities: true,
                 entities: [],
-                url: 'postgres://ynjkxwlyualiag:3175d2e205a1334974ee4c9b3bec37e50b36bfe2e88ab1bb28cb4ac092b08000@ec2-54-147-93-73.compute-1.amazonaws.com:5432/deio4tc1l9pdlb',
+                url: 'postgres://bspoptrbdtspqs:cca87c2a6d5ebebaafce670a7af05b77cdc775353514fa6f8efeecc315d521c1@ec2-34-228-100-83.compute-1.amazonaws.com:5432/dape3pbvai4hkn',
                 ssl: {
                     rejectUnauthorized: false
                 },
