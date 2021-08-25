@@ -71,7 +71,7 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], PostController.prototype, "Delete", null);
 PostController = __decorate([
-    common_1.Controller('post'),
+    common_1.Controller(),
     __metadata("design:paramtypes", [post_service_1.PostService])
 ], PostController);
 exports.PostController = PostController;

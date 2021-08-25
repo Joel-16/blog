@@ -3,7 +3,7 @@ import { PostService } from './post.service';
 import { postFeed } from './models/post.interface'
 import { Article } from './entity/post.entity';
 
-@Controller('post')
+@Controller()
 export class PostController {
     constructor(private readonly postService : PostService){}
 
