@@ -27,8 +27,8 @@ export class PostService {
         return result
     }
 
-    async getOne(title : string): Promise<Article> {
-        const result = await this.article.findOneOrFail({where: {title: title}})
+    async getOne(id : number): Promise<Article> {
+        const result = await this.article.findOneOrFail(id)
         return result
     }
   
@@ -42,8 +42,8 @@ export class PostService {
         return article
     } 
 
-    async Delete(title : string): Promise<string>{
-        const resu = await this.article.delete({title: title})
+    async Delete(id : number): Promise<string>{
+        const resu = await this.article.delete(id)
 
         return "successful"
     }

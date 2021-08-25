@@ -25,14 +25,14 @@ let PostController = class PostController {
     async getAll() {
         return this.postService.getAll();
     }
-    async getOne(title) {
-        return this.postService.getOne(title);
+    async getOne(id) {
+        return this.postService.getOne(id);
     }
-    async Update(postDto, title) {
-        return this.postService.Update(title, postDto);
+    async Update(postDto, id) {
+        return this.postService.Update(id, postDto);
     }
-    async Delete(title) {
-        return this.postService.Delete(title);
+    async Delete(id) {
+        return this.postService.Delete(id);
     }
 };
 __decorate([
@@ -49,25 +49,25 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], PostController.prototype, "getAll", null);
 __decorate([
-    common_1.Get(),
-    __param(0, common_1.Param('title')),
+    common_1.Get('update/:id'),
+    __param(0, common_1.Param('id')),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [String]),
+    __metadata("design:paramtypes", [Number]),
     __metadata("design:returntype", Promise)
 ], PostController.prototype, "getOne", null);
 __decorate([
-    common_1.Put(':title'),
+    common_1.Put(':id'),
     __param(0, common_1.Body()),
-    __param(1, common_1.Param('title')),
+    __param(1, common_1.Param('id')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, String]),
     __metadata("design:returntype", Promise)
 ], PostController.prototype, "Update", null);
 __decorate([
-    common_1.Delete('title'),
-    __param(0, common_1.Param('title')),
+    common_1.Delete('delete/:id'),
+    __param(0, common_1.Param('id')),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [String]),
+    __metadata("design:paramtypes", [Number]),
     __metadata("design:returntype", Promise)
 ], PostController.prototype, "Delete", null);
 PostController = __decorate([

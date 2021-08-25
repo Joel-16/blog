@@ -6,7 +6,7 @@ export declare class PostService {
     constructor(article: Repository<Article>);
     Create(postDto: postFeed): Promise<Article>;
     getAll(): Promise<Article[]>;
-    getOne(title: string): Promise<Article>;
+    getOne(id: number): Promise<Article>;
     Update(title: string, postDto: postFeed): Promise<Article>;
-    Delete(title: string): Promise<string>;
+    Delete(id: number): Promise<string>;
 }

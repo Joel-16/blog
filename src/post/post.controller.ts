@@ -18,17 +18,17 @@ export class PostController {
         return this.postService.getAll()
     }
 
-    @Get()
-    async getOne(@Param('title') title : string): Promise<Article>{
-        return this.postService.getOne(title)
+    @Get('update/:id')
+    async getOne(@Param('id') id : number): Promise<Article>{
+        return this.postService.getOne(id)
     }
 
-    @Put(':title')
-    async Update(@Body() postDto :postFeed, @Param('title') title: string ): Promise<Article>{
-        return this.postService.Update(title, postDto)
+    @Put(':id')
+    async Update(@Body() postDto :postFeed, @Param('id') id: string ): Promise<Article>{
+        return this.postService.Update(id, postDto)
     }
-    @Delete('title')
-    async Delete(@Param('title') title:string): Promise<string>{
-        return this.postService.Delete(title)
+    @Delete('delete/:id')
+    async Delete(@Param('id') id:number): Promise<string>{
+        return this.postService.Delete(id)
     } 
 }

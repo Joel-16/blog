@@ -6,7 +6,7 @@ export declare class PostController {
     constructor(postService: PostService);
     Create(postDto: postFeed): Promise<Article>;
     getAll(): Promise<Article[]>;
-    getOne(title: string): Promise<Article>;
-    Update(postDto: postFeed, title: string): Promise<Article>;
-    Delete(title: string): Promise<string>;
+    getOne(id: number): Promise<Article>;
+    Update(postDto: postFeed, id: string): Promise<Article>;
+    Delete(id: number): Promise<string>;
 }

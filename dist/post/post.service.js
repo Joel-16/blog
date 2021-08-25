@@ -34,8 +34,8 @@ let PostService = class PostService {
         const result = await this.article.find();
         return result;
     }
-    async getOne(title) {
-        const result = await this.article.findOneOrFail({ where: { title: title } });
+    async getOne(id) {
+        const result = await this.article.findOneOrFail(id);
         return result;
     }
     async Update(title, postDto) {
@@ -47,8 +47,8 @@ let PostService = class PostService {
         article.save();
         return article;
     }
-    async Delete(title) {
-        const resu = await this.article.delete({ title: title });
+    async Delete(id) {
+        const resu = await this.article.delete(id);
         return "successful";
     }
 };

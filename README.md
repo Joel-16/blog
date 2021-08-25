@@ -24,7 +24,7 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+A simple blog API
 
 ## Installation
 
@@ -65,6 +65,7 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## Stay in touch
 
 - Author - [Inaku Joel](inakujoel16@gmail.com)
+-Live - [green-blog](https://green-blog.herokuapp.com/)
 
 
 ## License
