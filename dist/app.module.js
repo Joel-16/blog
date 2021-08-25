@@ -21,11 +21,6 @@ AppModule = __decorate([
             config_1.ConfigModule.forRoot({ isGlobal: true }),
             typeorm_1.TypeOrmModule.forRoot({
                 type: 'postgres',
-                host: 'ec2-35-174-122-153.compute-1.amazonaws.com',
-                port: 5432,
-                username: 'kdsebwidssgndo',
-                password: '98ec89114a5a1e52d965072941d49427995f9ae201533bb1a9be08442b2e2e76',
-                database: 'd23q0n9iu3166p',
                 autoLoadEntities: true,
                 entities: [],
                 url: 'postgres://kdsebwidssgndo:98ec89114a5a1e52d965072941d49427995f9ae201533bb1a9be08442b2e2e76@ec2-35-174-122-153.compute-1.amazonaws.com:5432/d23q0n9iu3166p',
