@@ -12,7 +12,7 @@ export class PostService {
     ) {}
 
     async Create(postDto: postFeed): Promise<Article>{
-        const result = this.article.save({
+        const result = await this.article.save({
             name : postDto.name,
             email : postDto.email,
             body : postDto.body,
@@ -28,7 +28,7 @@ export class PostService {
     }
 
     async getOne(id : number): Promise<Article> {
-        const result = await this.article.findOneOrFail(id)
+        const result = await this.article.findOne(id)
         return result
     }
   

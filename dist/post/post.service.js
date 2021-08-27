@@ -22,7 +22,7 @@ let PostService = class PostService {
         this.article = article;
     }
     async Create(postDto) {
-        const result = this.article.save({
+        const result = await this.article.save({
             name: postDto.name,
             email: postDto.email,
             body: postDto.body,
@@ -35,7 +35,7 @@ let PostService = class PostService {
         return result;
     }
     async getOne(id) {
-        const result = await this.article.findOneOrFail(id);
+        const result = await this.article.findOne(id);
         return result;
     }
     async Update(title, postDto) {

@@ -16,7 +16,7 @@ export class Article extends BaseEntity {
     @Column()
     body : string
 
-    @Column()
+    @Column({select: false})
     title : string
 
     @CreateDateColumn()

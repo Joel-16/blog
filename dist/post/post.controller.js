@@ -19,24 +19,24 @@ let PostController = class PostController {
     constructor(postService) {
         this.postService = postService;
     }
-    async Create(postDto) {
+    Create(postDto) {
         return this.postService.Create(postDto);
     }
-    async getAll() {
+    getAll() {
         return this.postService.getAll();
     }
-    async getOne(id) {
+    getOne(id) {
         return this.postService.getOne(id);
     }
-    async Update(postDto, id) {
+    Update(postDto, id) {
         return this.postService.Update(id, postDto);
     }
-    async Delete(id) {
+    Delete(id) {
         return this.postService.Delete(id);
     }
 };
 __decorate([
-    common_1.Post('create'),
+    common_1.Post(),
     __param(0, common_1.Body()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object]),
@@ -49,7 +49,7 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], PostController.prototype, "getAll", null);
 __decorate([
-    common_1.Get('update/:id'),
+    common_1.Get(':id'),
     __param(0, common_1.Param('id')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Number]),
@@ -64,14 +64,14 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], PostController.prototype, "Update", null);
 __decorate([
-    common_1.Delete('delete/:id'),
+    common_1.Delete(':id'),
     __param(0, common_1.Param('id')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Number]),
     __metadata("design:returntype", Promise)
 ], PostController.prototype, "Delete", null);
 PostController = __decorate([
-    common_1.Controller(),
+    common_1.Controller('posts'),
     __metadata("design:paramtypes", [post_service_1.PostService])
 ], PostController);
 exports.PostController = PostController;
