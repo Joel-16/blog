@@ -11,22 +11,14 @@ const common_1 = require("@nestjs/common");
 const typeorm_1 = require("@nestjs/typeorm");
 const post_module_1 = require("./post/post.module");
 const config_1 = require("@nestjs/config");
+const database_1 = require("./database");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
     common_1.Module({
         imports: [
             config_1.ConfigModule.forRoot({ isGlobal: true }),
-            typeorm_1.TypeOrmModule.forRoot({
-                type: 'postgres',
-                autoLoadEntities: true,
-                entities: [],
-                url: 'postgres://bspoptrbdtspqs:cca87c2a6d5ebebaafce670a7af05b77cdc775353514fa6f8efeecc315d521c1@ec2-34-228-100-83.compute-1.amazonaws.com:5432/dape3pbvai4hkn',
-                ssl: {
-                    rejectUnauthorized: false
-                },
-                synchronize: true
-            }), post_module_1.PostModule
+            typeorm_1.TypeOrmModule.forRoot(database_1.b), post_module_1.PostModule
         ]
     })
 ], AppModule);
